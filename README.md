@@ -1,4 +1,4 @@
-# server
+# Setup server
 To go project dir:
 
 ```bash
