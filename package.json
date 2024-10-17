@@ -1,0 +1,34 @@
+{
+  "name": "server",
+  "module": "src/app.ts",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "server of messaging app",
+  "main": "src/app.ts",
+  "license": "MIT",
+  "author": "YOGESH",
+  "scripts": {
+    "dev": "bun --watch src/app.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "dotenv": "^16.4.5",
+    "drizzle-kit": "^0.24.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.14.0",
+    "@types/uuid": "^10.0.0",
+    "argon2": "^0.41.1",
+    "cookie": "^1.0.1",
+    "dens": "^1.1.6",
+    "drizzle-orm": "^0.33.0",
+    "hono": "^4.6.3",
+    "joi": "^17.13.3",
+    "jose": "^5.9.3",
+    "uuid": "^10.0.0",
+    "zod": "^3.23.8"
+  }
+}
