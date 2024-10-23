@@ -44,14 +44,14 @@ const registerUser = async (c: Context) => {
 
       return c.json(
         { message: `Successfully registered as a ${username}` },
-        201,
+        201
       );
     } else {
       return c.json(
         {
           message: "unprocessable entity",
         },
-        422,
+        422
       );
     }
   } catch (e) {
@@ -71,24 +71,19 @@ const loginUser = async (c: Context) => {
 
         const accessToken = await createAccessToken(
           userInfo.username,
-          userInfo.email,
+          userInfo.email
         );
         const encryptedAccessToken = await encryptAccessToken(accessToken);
 
         setAccessToken(c, encryptedAccessToken);
 
-        return c.json(
-          {
-            Access: "Granted",
-          },
-          204,
-        );
+        return c.json({}, 204);
       } else {
         return c.json(
           {
             message: "email or password is invalid!",
           },
-          403,
+          403
         );
       }
     } else {
